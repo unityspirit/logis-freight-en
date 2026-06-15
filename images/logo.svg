@@ -1,3 +1,8 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="36" fill="#ffffff" letter-spacing="2">LOGIS FREIGHT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect x="15" y="45" width="55" height="35" rx="3" fill="none" stroke="#f4a900" stroke-width="2.5"/>
+  <polygon points="70,45 95,45 105,60 105,80 70,80" fill="none" stroke="#f4a900" stroke-width="2.5"/>
+  <circle cx="35" cy="85" r="8" fill="none" stroke="#f4a900" stroke-width="2.5"/>
+  <circle cx="90" cy="85" r="8" fill="none" stroke="#f4a900" stroke-width="2.5"/>
+  <line x1="43" y1="85" x2="82" y2="85" stroke="#f4a900" stroke-width="2"/>
+  <rect x="75" y="55" width="15" height="12" rx="2" fill="#f4a900" opacity="0.3"/>
 </svg>
