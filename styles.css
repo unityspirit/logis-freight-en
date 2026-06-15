@@ -1,5 +1,5 @@
 /* ============================================================
-   LOGIS FREIGHT â€” styles.css
+   LOGIS FREIGHT — styles.css
    Design: Sharp Tech Yellow | Bebas Neue + Roboto | #FFC107
    ============================================================ */
 
@@ -15,14 +15,14 @@
   --font-h:     'Bebas Neue', Impact, sans-serif;
   --font-t:     'Roboto', Arial, sans-serif;
   --ts-dark:
-   -1px -1px 0 #000,
-    1px -1px 0 #000,
-   -1px  1px 0 #000,
-    1px  1px 0 #000,
-    0   -1px 0 #000,
-    0    1px 0 #000,
-   -1px  0   0 #000,
-    1px  0   0 #000;
+    1px  1px 0 rgba(0,0,0,1),
+   -1px -1px 0 rgba(0,0,0,1),
+    1px -1px 0 rgba(0,0,0,1),
+   -1px  1px 0 rgba(0,0,0,1),
+    2px  2px 0 rgba(0,0,0,0.8),
+   -2px -2px 0 rgba(0,0,0,0.8),
+    0 0 8px rgba(0,0,0,0.9),
+    0 0 20px rgba(0,0,0,0.7);
 }
 
 /* === RESET === */
@@ -80,21 +80,19 @@ img { max-width: 100%; }
   transition: opacity 0.8s ease;
 }
 .loader-inner { text-align: center; }
+.loader-logo-img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  opacity: 0.9;
+}
 .loader-logo {
   font-family: var(--font-h);
   font-size: clamp(2.5rem, 8vw, 5rem);
   letter-spacing: 0.1em;
   color: var(--white);
   margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-.loader-logo img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
 }
 .loader-bar-wrap {
   width: clamp(200px, 40vw, 360px);
@@ -111,12 +109,20 @@ img { max-width: 100%; }
   transition: width 0.3s ease;
   border-radius: 2px;
 }
+.loader-pct {
+  font-family: var(--font-h);
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  color: var(--yellow);
+  margin: 0.5rem 0 0.5rem;
+  text-shadow: none;
+}
 .loader-text {
   font-family: var(--font-t);
   font-weight: 300;
   font-size: 0.85rem;
   letter-spacing: 0.25em;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.5);
   text-transform: uppercase;
 }
 
@@ -141,27 +147,9 @@ img { max-width: 100%; }
   gap: 10px;
 }
 .nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.nav-logo img, .nav-logo-img, .logo-img {
-  width: 36px;
   height: 36px;
-  object-fit: contain;
-}
-.nav-logo span {
-  font-family: var(--font-h);
-  font-size: 1.5rem;
-  letter-spacing: 0.08em;
-  color: var(--white);
-}
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  width: auto;
+  mix-blend-mode: screen;
 }
 .nav-brand-text {
   font-family: var(--font-h);
@@ -180,7 +168,7 @@ img { max-width: 100%; }
   font-size: 0.8rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.75);
   transition: color 0.3s;
 }
 .nav-link:hover, .nav-link.active { color: var(--yellow); }
@@ -386,7 +374,7 @@ img { max-width: 100%; }
   font-family: var(--font-t);
   font-weight: 300;
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: rgba(255,255,255,0.9);
+  color: #ffffff;
   text-shadow: var(--ts-dark);
 }
 
@@ -493,7 +481,7 @@ img { max-width: 100%; }
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.45);
   text-shadow: var(--ts-dark);
 }
 .scroll-arrow {
@@ -553,7 +541,7 @@ img { max-width: 100%; }
   font-family: var(--font-t);
   font-weight: 300;
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.9);
+  color: #ffffff;
   text-shadow: var(--ts-dark);
   line-height: 1.7;
   margin-bottom: 1.2rem;
@@ -632,7 +620,7 @@ img { max-width: 100%; }
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
+  color: #ffffff;
   text-shadow: var(--ts-dark);
 }
 .routes-cta {
@@ -672,8 +660,8 @@ img { max-width: 100%; }
   font-family: var(--font-h);
   font-size: 3rem;
   letter-spacing: 0.05em;
-  color: var(--yellow);
-  text-shadow: none;
+  color: var(--orange);
+  text-shadow: 0 0 12px rgba(255,152,0,0.5), 0 0 24px rgba(255,152,0,0.25);
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -693,7 +681,7 @@ img { max-width: 100%; }
   font-family: var(--font-t);
   font-weight: 300;
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.9);
+  color: #ffffff;
   text-shadow: var(--ts-dark);
   line-height: 1.7;
 }
@@ -760,7 +748,7 @@ img { max-width: 100%; }
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
+  color: #ffffff;
   text-shadow: var(--ts-dark);
 }
 .about-badges {
@@ -854,7 +842,7 @@ img { max-width: 100%; }
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.45);
   text-shadow: var(--ts-dark);
   margin-bottom: 0.3rem;
 }
@@ -909,7 +897,7 @@ a.contact-value:hover { color: var(--yellow); }
 .form-note {
   margin-top: 0.75rem;
   font-size: 0.65rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.3);
   text-shadow: none;
   line-height: 1.5;
 }
@@ -939,13 +927,13 @@ a.contact-value:hover { color: var(--yellow); }
 .footer-brand .accent-yellow { text-shadow: none; }
 .footer-copy {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.35);
 }
 .footer-links { display: flex; gap: 1.5rem; }
 .footer-link {
   font-size: 0.75rem;
   letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.45);
   text-transform: uppercase;
   transition: color 0.3s;
 }

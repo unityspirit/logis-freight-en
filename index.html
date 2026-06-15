@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>LOGIS FREIGHT — Logistics &amp; Freight</title>
-  <meta name="description" content="Federal freight carrier. Road, rail, sea transport. Warehousing and customs clearance. 99.8% on-time delivery." />
-  <meta name="keywords" content="logistics, freight, cargo delivery, warehousing, customs clearance, transport" />
-  <meta property="og:title" content="LOGIS FREIGHT — Logistics &amp; Freight" />
-  <meta property="og:description" content="Federal carrier. Road, rail, sea freight. 99.8% on-time. 12 years experience." />
+  <title>LOGIS FREIGHT — Global Logistics & Freight Shipping</title>
+  <meta name="description" content="LOGIS FREIGHT — international freight carrier. Road, rail and ocean shipping. Warehousing services. Turnkey customs clearance. 12 years of experience, 200,000+ deliveries." />
+  <meta name="keywords" content="freight shipping, logistics, transport company, FTL, customs clearance, warehousing, international shipping" />
+  <meta property="og:title" content="LOGIS FREIGHT — Global Logistics & Freight Shipping" />
+  <meta property="og:description" content="International freight carrier. Road, rail and ocean shipping. On time. Every time." />
   <meta property="og:image" content="images/logo.svg" />
-  <meta property="og:url" content="https://logisfreight.ru" />
+  <meta property="og:url" content="https://unityspirit.github.io/logis-freight-en/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <link rel="icon" type="image/png" href="images/logo.svg" />
@@ -17,130 +17,192 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <canvas id="gl-canvas"></canvas>
+  <div class="grain-overlay"></div>
   <div id="loader">
     <div class="loader-inner">
-      <div class="loader-logo"><img src="images/logo.svg" alt="LOGIS FREIGHT" />LOGIS <span style="color:#FFC107">FREIGHT</span></div>
-      <div class="progress-track"><div id="progress-bar"></div></div>
+      <img src="images/logo.svg" alt="LOGIS FREIGHT" class="loader-logo-img" />
+      <div class="loader-logo">LOGIS<span class="accent-yellow">FREIGHT</span></div>
+      <div class="loader-bar-wrap"><div id="progress-bar"></div></div>
+      <p class="loader-pct" id="loader-pct">0%</p>
       <div class="loader-text">Loading...</div>
     </div>
   </div>
-  <canvas id="gl-canvas"></canvas>
-  <canvas id="particle-canvas"></canvas>
-  <div class="grain-overlay"></div>
   <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo"><img src="images/logo.svg" alt="LOGIS FREIGHT" onerror="this.style.display='none'" /><span>LOGIS FREIGHT</span></a>
-      <ul class="nav-links">
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#portfolio" class="nav-link">Routes</a></li>
-        <li><a href="#process" class="nav-link">Process</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#contact" class="nav-link">Order</a></li>
-      </ul>
-      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-brand">
+      <img src="images/logo.svg" alt="LOGIS FREIGHT" class="nav-logo" onerror="this.style.display='none'" />
+      <span class="nav-brand-text">LOGIS<span class="accent-yellow">FREIGHT</span></span>
     </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#routes" class="nav-link">Routes</a></li>
+      <li><a href="#process" class="nav-link">How It Works</a></li>
+      <li><a href="#about" class="nav-link">About Us</a></li>
+      <li><a href="#contact" class="nav-link nav-cta">Get a Quote</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
-  <div class="nav-drawer" id="nav-drawer" hidden>
-    <div class="drawer-backdrop" id="drawer-backdrop"></div>
-    <div class="drawer-panel">
-      <button class="drawer-close" id="drawer-close">✕</button>
-      <ul>
-        <li><a href="#services" class="drawer-link">Services</a></li>
-        <li><a href="#portfolio" class="drawer-link">Routes</a></li>
-        <li><a href="#process" class="drawer-link">Process</a></li>
-        <li><a href="#about" class="drawer-link">About</a></li>
-        <li><a href="#contact" class="drawer-link">Order</a></li>
-      </ul>
+  <div class="nav-drawer" id="nav-drawer">
+    <button class="drawer-close" id="drawer-close" aria-label="Close">&#10005;</button>
+    <ul class="drawer-links">
+      <li><a href="#services" class="drawer-link">Services</a></li>
+      <li><a href="#routes" class="drawer-link">Routes</a></li>
+      <li><a href="#process" class="drawer-link">How It Works</a></li>
+      <li><a href="#about" class="drawer-link">About Us</a></li>
+      <li><a href="#contact" class="drawer-link drawer-cta">Get a Quote</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="mailto:contact@unityspiritpartners.com" class="drawer-footer-link">contact@unityspiritpartners.com</a>
+      <a href="https://unityspiritpartners.com" target="_blank" class="drawer-footer-link">unityspiritpartners.com</a>
     </div>
   </div>
-  <div id="ui-layer"><div class="stage">
-    <section class="page is-active" data-index="0" id="hero">
-      <div class="hero-content">
-        <div class="hero-badge reveal-3d">SINCE 2012</div>
-        <h1 class="hero-title reveal-3d">LOGIS<br/>FREIGHT</h1>
-        <p class="hero-subtitle reveal-3d">Cargo delivered. Always.</p>
-        <p class="hero-desc reveal-3d">Road, rail and sea freight. Warehousing.<br/>Full customs clearance.</p>
-        <div class="hero-btns reveal-3d">
-          <a href="#contact" class="btn-primary">Get a Quote</a>
-          <a href="#services" class="btn-outline">Our Services</a>
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <div id="ui-layer">
+    <div class="stage">
+      <!-- HERO -->
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="hero-inner">
+          <div class="hero-badge reveal-3d">On Time. Every Time.</div>
+          <h1 class="hero-title reveal-3d">LOGIS<br /><span class="accent-yellow">FREIGHT</span></h1>
+          <p class="hero-subtitle reveal-3d">Your cargo delivered. <span class="accent-orange">Always.</span></p>
+          <p class="hero-desc reveal-3d">Road, rail and ocean freight shipping.<br />Warehousing services. Turnkey customs clearance.</p>
+          <div class="hero-btns reveal-3d">
+            <a href="#contact" class="btn btn-primary">Calculate Shipping</a>
+            <a href="#services" class="btn btn-outline">Our Services</a>
+          </div>
+          <div class="hero-stats reveal-3d">
+            <div class="stat-item"><span class="stat-num accent-orange">12</span><span class="stat-label">years of experience</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><span class="stat-num accent-orange">50+</span><span class="stat-label">vehicles in fleet</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><span class="stat-num accent-orange">200K+</span><span class="stat-label">deliveries</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat-item"><span class="stat-num accent-orange">99.8%</span><span class="stat-label">on time</span></div>
+          </div>
         </div>
-        <div class="hero-facts reveal-3d">
-          <div class="fact-item"><span class="fact-num">50+</span><span class="fact-label">vehicles</span></div>
-          <div class="fact-item"><span class="fact-num">200K+</span><span class="fact-label">deliveries</span></div>
-          <div class="fact-item"><span class="fact-num">99.8%</span><span class="fact-label">on time</span></div>
+        <div class="scroll-hint"><span>Scroll down</span><div class="scroll-arrow"></div></div>
+      </section>
+      <!-- SERVICES -->
+      <section class="page" data-index="1" id="services">
+        <div class="section-inner">
+          <div class="section-header reveal-3d">
+            <div class="section-tag">WHAT WE DO</div>
+            <h2 class="section-title">SERVICES</h2>
+            <p class="section-subtitle">Complete logistics supply chain</p>
+          </div>
+          <div class="cards-grid reveal-3d">
+            <div class="card"><div class="card-icon">&#x1F69A;</div><h3 class="card-title">Road Freight</h3><div class="card-accent-line"></div><p class="card-text">Full truckload fleet of <span class="accent-orange">50+</span> vehicles, routes worldwide. Refrigerated, curtainsider and flatbed trucks.</p><div class="card-tag">FTL / LTL</div></div>
+            <div class="card"><div class="card-icon">&#x1F69B;</div><h3 class="card-title">Rail Freight</h3><div class="card-accent-line"></div><p class="card-text">Oversized cargo and heavy equipment. Open wagons, flatcars and covered carriages.</p><div class="card-tag">Rail / Container</div></div>
+            <div class="card"><div class="card-icon">&#x1F4E6;</div><h3 class="card-title">Warehousing</h3><div class="card-accent-line"></div><p class="card-text">Bonded and general storage, short-term and long-term. Class-A warehouse facilities under our management.</p><div class="card-tag">Storage / Handling</div></div>
+            <div class="card"><div class="card-icon">&#x1F4C4;</div><h3 class="card-title">Customs Clearance</h3><div class="card-accent-line"></div><p class="card-text">End-to-end turnkey service. Declarations, certifications, permits — all included.</p><div class="card-tag">Turnkey</div></div>
+          </div>
         </div>
-      </div>
-      <div class="scroll-hint reveal-3d"><span>↓</span></div>
-    </section>
-    <section class="page" data-index="1" id="services">
-      <div class="section-content">
-        <div class="section-header reveal-3d"><h2 class="section-title">SERVICES</h2><p class="section-subtitle">Complete logistics chain</p></div>
-        <div class="cards-grid reveal-3d">
-          <div class="card"><div class="card-icon">🚛</div><h3 class="card-title">Road Freight</h3><p class="card-text">Fleet of 50+ vehicles, nationwide coverage</p></div>
-          <div class="card"><div class="card-icon">🚃</div><h3 class="card-title">Rail Freight</h3><p class="card-text">Non-standard cargo and special equipment</p></div>
-          <div class="card"><div class="card-icon">📦</div><h3 class="card-title">Warehousing</h3><p class="card-text">Secure storage, temporary and permanent</p></div>
-          <div class="card"><div class="card-icon">📄</div><h3 class="card-title">Customs Clearance</h3><p class="card-text">Full import/export documentation, end-to-end</p></div>
+      </section>
+      <!-- ROUTES -->
+      <section class="page" data-index="2" id="routes">
+        <div class="section-inner">
+          <div class="section-header reveal-3d">
+            <div class="section-tag">COVERAGE</div>
+            <h2 class="section-title">OUR ROUTES</h2>
+            <p class="section-subtitle">Coverage — Worldwide</p>
+          </div>
+          <div class="routes-grid reveal-3d">
+            <div class="route-card"><div class="route-arrow">&#8594;</div><div class="route-cities"><span class="route-from">New York</span><span class="route-dot-line"></span><span class="route-to">Los Angeles</span></div><div class="route-time"><span class="accent-orange">48</span> hours</div><div class="route-type">Road Freight / Rail</div></div>
+            <div class="route-card"><div class="route-arrow">&#8594;</div><div class="route-cities"><span class="route-from">London</span><span class="route-dot-line"></span><span class="route-to">Berlin</span></div><div class="route-time"><span class="accent-orange">36</span> hours</div><div class="route-type">Road Freight</div></div>
+            <div class="route-card"><div class="route-arrow">&#8594;</div><div class="route-cities"><span class="route-from">Dubai</span><span class="route-dot-line"></span><span class="route-to">Singapore</span></div><div class="route-time"><span class="accent-orange">6</span> days</div><div class="route-type">Ocean Freight</div></div>
+            <div class="route-card"><div class="route-arrow">&#8594;</div><div class="route-cities"><span class="route-from">Shanghai</span><span class="route-dot-line"></span><span class="route-to">Tokyo</span></div><div class="route-time"><span class="accent-orange">72</span> hours</div><div class="route-type">Ocean + Road</div></div>
+          </div>
+          <div class="routes-cta reveal-3d">
+            <p class="routes-note">Need a route not listed here?</p>
+            <a href="#contact" class="btn btn-primary">Request a Route</a>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="page" data-index="2" id="portfolio">
-      <div class="section-content">
-        <div class="section-header reveal-3d"><h2 class="section-title">OUR ROUTES</h2><p class="section-subtitle">Geography — all Russia</p></div>
-        <div class="cards-grid reveal-3d">
-          <div class="card"><div class="card-icon">🗺️</div><h3 class="card-title">Moscow → Novosibirsk</h3><p class="card-text">Transit time: 48 hours</p></div>
-          <div class="card"><div class="card-icon">🗺️</div><h3 class="card-title">St. Petersburg → Yekaterinburg</h3><p class="card-text">Transit time: 36 hours</p></div>
-          <div class="card"><div class="card-icon">🗺️</div><h3 class="card-title">Rostov → Krasnodar</h3><p class="card-text">Transit time: 6 hours</p></div>
-          <div class="card"><div class="card-icon">🗺️</div><h3 class="card-title">Vladivostok → Sakhalin</h3><p class="card-text">Transit time: 72 hours</p></div>
+      </section>
+      <!-- PROCESS -->
+      <section class="page" data-index="3" id="process">
+        <div class="section-inner">
+          <div class="section-header reveal-3d">
+            <div class="section-tag">SIMPLE & TRANSPARENT</div>
+            <h2 class="section-title">HOW WE WORK</h2>
+          </div>
+          <div class="process-steps reveal-3d">
+            <div class="step"><div class="step-num">01</div><div class="step-icon">&#x1F4DE;</div><h3 class="step-title">Request</h3><p class="step-text">Submit a request — we respond within <span class="accent-orange">1 hour</span>. We'll clarify cargo details and route.</p></div>
+            <div class="step-connector"></div>
+            <div class="step"><div class="step-num">02</div><div class="step-icon">&#x1F4C4;</div><h3 class="step-title">Documentation</h3><p class="step-text">Complete customs clearance <span class="accent-orange">turnkey</span>. Declarations, certificates, permits.</p></div>
+            <div class="step-connector"></div>
+            <div class="step"><div class="step-num">03</div><div class="step-icon">&#x1F69A;</div><h3 class="step-title">Pickup</h3><p class="step-text">Cargo collected at the <span class="accent-orange">agreed time</span>. Precision without delays.</p></div>
+            <div class="step-connector"></div>
+            <div class="step"><div class="step-num">04</div><div class="step-icon">&#10003;</div><h3 class="step-title">Delivery</h3><p class="step-text"><span class="accent-orange">GPS tracking</span> in real time. Signed proof of delivery on completion.</p></div>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="page" data-index="3" id="process">
-      <div class="section-content">
-        <div class="section-header reveal-3d"><h2 class="section-title">HOW WE WORK</h2></div>
-        <div class="process-steps reveal-3d">
-          <div class="step"><div class="step-num">01</div><div class="step-icon">📞</div><h3 class="step-title">Request</h3><p class="step-text">Submit request — reply in 1 hour</p></div>
-          <div class="step-arrow">→</div>
-          <div class="step"><div class="step-num">02</div><div class="step-icon">📄</div><h3 class="step-title">Documents</h3><p class="step-text">Full customs processing included</p></div>
-          <div class="step-arrow">→</div>
-          <div class="step"><div class="step-num">03</div><div class="step-icon">🚛</div><h3 class="step-title">Loading</h3><p class="step-text">Cargo collected at agreed time</p></div>
-          <div class="step-arrow">→</div>
-          <div class="step"><div class="step-num">04</div><div class="step-icon">✅</div><h3 class="step-title">Delivery</h3><p class="step-text">GPS tracking, proof of delivery</p></div>
-        </div>
-      </div>
-    </section>
-    <section class="page" data-index="4" id="about">
-      <div class="section-content">
-        <div class="section-header reveal-3d"><h2 class="section-title">THE COMPANY</h2><p class="section-subtitle">Logistics company since 2012</p></div>
-        <div class="about-layout reveal-3d">
-          <div class="about-text">
-            <p>LOGIS FREIGHT — a federal carrier with own vehicle fleet and warehouse complexes across Russia. Over 200,000 deliveries completed.</p>
-            <p>We handle everything: documentation, customs, loading, tracking, and proof of delivery. One call covers it all.</p>
-            <div class="about-stats">
-              <div class="stat"><span class="stat-num" style="color:#FFC107">12</span><span class="stat-label">years</span></div>
-              <div class="stat"><span class="stat-num" style="color:#FFC107">50+</span><span class="stat-label">vehicles</span></div>
-              <div class="stat"><span class="stat-num" style="color:#FFC107">200K+</span><span class="stat-label">deliveries</span></div>
-              <div class="stat"><span class="stat-num" style="color:#FFC107">99.8%</span><span class="stat-label">on time</span></div>
+      </section>
+      <!-- ABOUT -->
+      <section class="page" data-index="4" id="about">
+        <div class="section-inner about-inner">
+          <div class="about-content">
+            <div class="section-header reveal-3d">
+              <div class="section-tag">WHO WE ARE</div>
+              <h2 class="section-title">ABOUT US</h2>
+              <p class="section-subtitle">Logistics company since <span class="accent-orange">2012</span></p>
+            </div>
+            <p class="about-desc reveal-3d">LOGIS FREIGHT is an international freight carrier with our own vehicle fleet and warehouse facilities. We operate worldwide and provide a full logistics cycle: from cargo pickup to final delivery to the consignee.</p>
+            <div class="about-facts reveal-3d">
+              <div class="fact-item"><div class="fact-num">12</div><div class="fact-label">years in business</div></div>
+              <div class="fact-item"><div class="fact-num">50+</div><div class="fact-label">vehicles in fleet</div></div>
+              <div class="fact-item"><div class="fact-num">200,000+</div><div class="fact-label">deliveries</div></div>
+              <div class="fact-item"><div class="fact-num">99.8%</div><div class="fact-label">on time</div></div>
+            </div>
+            <div class="about-badges reveal-3d">
+              <div class="badge">&#127942; Trusted Carrier 2023</div>
+              <div class="badge">&#10003; ISO 9001:2015</div>
+              <div class="badge">&#128205; Presence in 40+ cities</div>
+            </div>
+          </div>
+          <div class="about-visual reveal-3d">
+            <div class="about-emblem">
+              <div class="emblem-ring"></div>
+              <div class="emblem-core">
+                <div class="emblem-truck">&#x1F69A;</div>
+                <div class="emblem-year">est. 2012</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="page" data-index="5" id="contact">
-      <div class="section-content">
-        <div class="section-header reveal-3d"><h2 class="section-title">ORDER FREIGHT</h2><p class="section-subtitle">Reply in 1 hour, quote calculated</p></div>
-        <div class="contact-layout reveal-3d">
-          <div class="contact-info">
-            <div class="contact-item"><span class="contact-icon">📞</span><a href="tel:+79054991618">+7 (905) 499-16-18</a></div>
-            <div class="contact-item"><span class="contact-icon">✉️</span><a href="mailto:team@globalplus.tech">cargo@logisfreight.ru</a></div>
-            <div class="contact-item"><span class="contact-icon">📍</span><span>Moscow, Logistics St., 3</span></div>
-            <div class="contact-item"><span class="contact-icon">🕐</span><span>24/7, no days off</span></div>
+      </section>
+      <!-- CONTACT -->
+      <section class="page" data-index="5" id="contact">
+        <div class="section-inner">
+          <div class="section-header reveal-3d">
+            <div class="section-tag">UNITY SPIRIT PARTNERS</div>
+            <h2 class="section-title">WANT A WEBSITE LIKE THIS?</h2>
+            <p class="section-subtitle">Contact us — we'll build one for you</p>
           </div>
-          
+          <div class="contact-layout reveal-3d">
+            <div class="contact-info">
+              <div class="contact-item"><div class="contact-icon">&#9993;</div><div class="contact-detail"><div class="contact-label">Email</div><a href="mailto:contact@unityspiritpartners.com" class="contact-value">contact@unityspiritpartners.com</a></div></div>
+              <div class="contact-item"><div class="contact-icon">&#127760;</div><div class="contact-detail"><div class="contact-label">Website</div><a href="https://unityspiritpartners.com" target="_blank" class="contact-value">unityspiritpartners.com</a></div></div>
+            </div>
+          </div>
+          <div class="contact-cta reveal-3d" style="text-align:center;margin-top:2.5rem;">
+            <a href="https://unityspiritpartners.com/#page-4" class="btn btn-outline">BACK TO MAIN PAGE</a>
+          </div>
         </div>
-        <footer class="site-footer"><p>© 2024 LOGIS FREIGHT. All rights reserved.</p></footer>
-      </div>
-    </section>
-  </div></div>
+        <footer class="site-footer">
+          <div class="footer-inner">
+            <div class="footer-brand">LOGIS<span class="accent-yellow">FREIGHT</span></div>
+            <div class="footer-copy">Sample site by Unity Spirit Partners &mdash; &copy; 2024 LOGIS FREIGHT</div>
+            <div class="footer-links">
+              <a href="#hero" class="footer-link">Home</a>
+              <a href="#services" class="footer-link">Services</a>
+              <a href="#contact" class="footer-link">Contact</a>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </div>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
